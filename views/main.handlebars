@@ -13,6 +13,15 @@
         <a href="/">DEV HUB</a></h1>
         </header>
     </div>
+     <nav>
+         {{#if logged_in}} 
+        <a href="/">Home</a> |
+        <a href="/dashboard">Dashboard</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}} 
+        <a href="/login">login</a>
+        {{/if}} 
+      </nav>
     
       <script src="/javascript/logout.js"></script>
 </body>
