@@ -9,29 +9,32 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
     <body>
+        <form class="form log-in"></form>
         <div class="vh-100 d-flex justify-content-center align-items-center ">
             <div class="col-md-4 p-5 shadow-sm border rounded-5 border-success ">
-                <h2 class="text-center mb-4 text-success">Dev Hub</h2>
+                <h2 class="text-center mb-4 text-success">Sign Up</h2>
                 <form>
                     <div class="mb-3">
-                        <label for="InputEmail" class="form-label">Email:</label>
-                        <input type="email" class="form-control border border-success" id="Inputmail" aria-describedby="InputEmail1">
+                        <label for="reg-user" class="form-label">Username:</label>
+                        <input type="text" class="form-control border border-success" id="reg-user1" aria-describedby="regUser1">
                     </div>
                     <div class="mb-3">
-                        <label for="PasswordInput" class="form-label">Password:</label>
-                        <input type="password" class="form-control border border-success" id="PasswordInput1">
+                        <label for="reg-email" class="form-label">Email:</label>
+                        <input type="email" class="form-control border border-success" id="reg-email1">
                     </div>
-                
+                    <div class="mb-3">
+                        <label for="reg-password" class="form-label">Password:</label>
+                        <input type="password" class="form-control border border-success" id="reg-password1">
+                    </div>
                     <div class="d-grid">
-                        <button class="btn btn-success" type="submit">Login</button>
+                        <label for="submit" button class="btn btn-success" type="submit">Sign Up</button>
                     </div>
                 </form>
                 <div class="mt-3">
-                    <p class="mb-0  text-center">Don't have an account? <a href="./logout.handlebars"
-                            class="text-success fw-bold">Sign
-                            Up</a></p>
+                    <p class="mb-0  text-center">Already a user?<a href="./login.html"
+                            class="text-success fw-bold">Sign in</a></p>
                 </div>
             </div>
         </div>
     </body>
-<script src=""></script>
+<script src="./login.js"></script>
