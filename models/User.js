@@ -37,5 +37,6 @@ User.init(
     },
 )
 
+//add hooks for beforecreate and beforeUpdate with .hash and the allowed length of passowrd 
 
 module.exports = User;
