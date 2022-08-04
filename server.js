@@ -7,7 +7,7 @@
 //packages to download: 
 //eslint
 //express
-// sequelize
+//sequelize
 //mysql2
 //handlebars
 //express-session
