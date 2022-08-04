@@ -19,6 +19,7 @@ friendsList.init(
       type: DataTypes.STRING,
       allowNull: false,
       references :{
+        //idea behind this would be to connect the friendslist with userid
         model: 'user',
         key: 'id'
       }

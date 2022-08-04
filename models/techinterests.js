@@ -23,10 +23,10 @@ techInterest.init(
                 key: 'id'
             }
         },
-
     },
 );
 
 //sequelize built-in property
 
 module.exports = techInterest;
+
