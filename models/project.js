@@ -24,9 +24,6 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-  
-
-   },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -34,6 +31,7 @@ Project.init(
         key: 'id',
       },
     },
+  },
   {
     sequelize,
     timestamps: false,
