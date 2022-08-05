@@ -7,7 +7,7 @@ class User extends Model {
     //then return a bcrypted password and compare it with signup info
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
-      }
+    }
 }
 
 User.init(
@@ -33,31 +33,30 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            isAlphaNumeric : true,
+            isAlphaNumeric: true,
             validate: {
                 len: [10],
             },
         },
     },
     {
+        //add hooks for beforecreate and beforeUpdate with .hash and the allowed length of passowrd 
         hooks: {
-          beforeCreate: async (newUserData) => {
-            newUserData.password = await bcrypt.hash(newUserData.password, 10);
-            return newUserData;
-          },
-          beforeUpdate: async (updatedUserData) => {
-            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-            return updatedUserData;
-          },
+            beforeCreate: async (newUserData) => {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+            },
+            beforeUpdate: async (updatedUserData) => {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            },
         },
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'user',
-      }
-)
-
-//add hooks for beforecreate and beforeUpdate with .hash and the allowed length of passowrd 
+    }
+);
 
 module.exports = User;
