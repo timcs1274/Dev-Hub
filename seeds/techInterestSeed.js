@@ -11,4 +11,4 @@ const techInterestSeedData =
 
 const seedingTechInterest = () => techInterest.bulkCreate(techInterestSeedData)
 
-module.exports = seedingTechInterest
+module.exports = seedingTechInterest;
