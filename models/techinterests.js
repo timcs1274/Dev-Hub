@@ -18,6 +18,7 @@ techInterest.init(
         technologies: {
             type: DataTypes.STRING,
             allowNull: false,
+            isAlpha : true,
             references : {
                 model: 'user',
                 key: 'id'
