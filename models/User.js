@@ -60,3 +60,14 @@ User.init(
 );
 
 module.exports = User;
+
+
+//useruser model- jointable (friend)
+
+//projectuser model (collab)
+
+//userProject
+// Projectbelongstouseras Owner
+
+
+
