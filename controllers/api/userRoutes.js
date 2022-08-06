@@ -24,6 +24,7 @@ const multer = require("multer");
 
 //post route to create user's login
 router.post('/login', async (req, res) => {
+    console.log('i work')
     try {
         const userData = await User.findOne({ where: { email: req.body.email } });
 
