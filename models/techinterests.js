@@ -14,26 +14,32 @@ techInterest.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-            
+
         },
         technologies: {
             type: DataTypes.STRING,
             allowNull: false,
-            isAlpha : true,
-            validate:{
+            isAlpha: true,
+            validate: {
                 isIn: true,
             },
-           
         },
-      
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+                unique: false
+            },
+        },
     },
    {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'techInterest',
-   }
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'techInterest',
+    }
 );
 
 //sequelize built-in property

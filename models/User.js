@@ -38,6 +38,15 @@ User.init(
                 len: [10],
             },
         },
+        profileImage : {
+            cloudinary: cloudinary,
+
+        },
+
+        bio : {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        }
     },
     {
         //add hooks for beforecreate and beforeUpdate with .hash and the allowed length of passowrd 
