@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+
 const cloudinary = require("cloudinary").v2;
 const express = require('express');
 const multer = require("multer");
@@ -20,6 +21,22 @@ const multer = require("multer");
 //     if (err) { console.warn(err); }
 //   });
 
+// const cloudinary = require("cloudinary");
+router.post('/', async(req, res) => {
+    try {
+        const userData = await User.create(req.body);
+
+
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+
+            res.status(200).json(userData);
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
 
 
 //post route to create user's login
@@ -62,6 +79,7 @@ router.post('/login', async (req, res) => {
 
 
 
+
 router.post('/images', (req, res) => {
     console.log ('idk')
     cloudinary.uploader.upload('./1.png', { tags: 'basic_sample' })
@@ -85,5 +103,6 @@ router.post('/images', (req, res) => {
     //     .then(newImage => res.json(newImage))
     //     .catch(err => console.log(err));
 });
+
 
 module.exports = router;
