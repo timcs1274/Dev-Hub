@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const cloudinary = require("cloudinary");
 
 class User extends Model {
     //probably have to check password here (login)
@@ -39,13 +40,13 @@ User.init(
             },
         },
         profileImage : {
-            cloudinary: cloudinary,
-
+            type: DataTypes.STRING,
+            allowNull: true,
         },
 
         bio : {
             type: DataTypes.TEXT,
-            allowNull: false,
+            allowNull: true,
         }
     },
     {
