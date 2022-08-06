@@ -68,6 +68,7 @@ sequelize.sync({ force: false }).then(() => {
     api_key: process.env.API_KEY,
     api_secret: process.env.API_SECRET
     });
+    
     const storage = cloudinaryStorage({
     cloudinary: cloudinary,
     folder: "demo",
