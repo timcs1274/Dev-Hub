@@ -1,7 +1,5 @@
 //comment out associations unfinsihed
 
-
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
