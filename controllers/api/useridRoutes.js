@@ -6,6 +6,7 @@ const withAuth = require('../utils/auth');
 
 
 router.get('/User/:id', async(req, res) => {
+
     try {
         const userData = await User.findByPk(req.params.id, {
             include: [{
@@ -45,14 +46,3 @@ router.get('/User/:id/Project', async(req, res) => {
     }
 });
 
-
-
-app.post('/api/images', parser.single("image"), (req, res) => {
-    console.log(req.file) // to see what is returned to you
-    const image = {};
-    image.url = req.file.url;
-    image.id = req.file.public_id;
-    Image.create(image) // save image information in database
-        .then(newImage => res.json(newImage))
-        .catch(err => console.log(err));
-});
