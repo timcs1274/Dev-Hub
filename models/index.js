@@ -1,10 +1,10 @@
 //join table
 
 const User = require('./User');
-const project = require('./Project');
+const project = require('./project');
 const techInterest = require('./techinterests');
 const ProjectUser = require('./projectUser');
-const Project = require('./Project');
+
 
 
 //userproject join table - how Im joining them 
