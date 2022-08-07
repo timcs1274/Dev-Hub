@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const cloudinary = require("cloudinary");
 
 class User extends Model {
     //probably have to check password here (login)
@@ -10,42 +11,41 @@ class User extends Model {
     }
 }
 
-User.init(
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
+User.init({
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+            isEmail: true,
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        isAlphaNumeric: true,
+        validate: {
+            len: [10],
         },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true,
-            },
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            isAlphaNumeric: true,
-            validate: {
-                len: [10],
-            },
-        },
-        profileImage : {
-            cloudinary: cloudinary,
 
+        profileImage : {
+            type: DataTypes.STRING,
+            allowNull: true,
         },
 
         bio : {
             type: DataTypes.TEXT,
-            allowNull: false,
+            allowNull: true,
         }
     },
     {
@@ -65,8 +65,8 @@ User.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'user',
-    }
-);
+
+
 
 module.exports = User;
 
@@ -77,6 +77,3 @@ module.exports = User;
 
 //userProject
 // Projectbelongstouseras Owner
-
-
-
