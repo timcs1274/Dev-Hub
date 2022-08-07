@@ -13,6 +13,14 @@ function uploadNewUser (e) {
         password: passwordInputEl.value,
         bio: "default bio"
     }
+
+    fetch('/api/newuser', {
+        method: "POST",
+        body: JSON.stringify(newUserObj),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
 }
 
 signupFormEl.addEventListener("submit", uploadNewUser)
