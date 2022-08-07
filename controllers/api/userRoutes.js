@@ -3,7 +3,7 @@ const { User } = require('../../models');
 
 const cloudinary = require("cloudinary").v2;
 const express = require('express');
-const multer = require("multer");
+// const multer = require("multer");
 
 
 
