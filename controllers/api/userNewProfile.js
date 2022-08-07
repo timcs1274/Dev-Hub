@@ -4,14 +4,12 @@ const cloudinary = require("cloudinary");
 
 router.post('/', (req, res) => {
     console.log(req.body)
-    console.log("yo")
 
     User.create(req.body)
     .then(newUser => {
         console.log(newUser)
         res.json("added a new user")
     })
-
 });
 
 
