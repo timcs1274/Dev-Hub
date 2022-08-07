@@ -1,8 +1,7 @@
-const nameInputEl = document.getElementById("name-signup")
-const emailInputEl = document.getElementById("email-signup")
-const passwordInputEl = document.getElementById("password-signup")
-
-const signupFormEl = document.getElementById("signup-form");
+const nameInputEl = document.getElementById("name-signup");
+const emailInputEl = document.getElementById("email-signup");
+const passwordInputEl = document.getElementById("password-signup");
+const signupFormEl = document.getElementById("sign-up");
 
 function uploadNewUser (e) {
     e.preventDefault();
