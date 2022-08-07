@@ -24,6 +24,8 @@ router.get('/', async(req, res) => {
         res.status(500).json(err);
     }
 });
+
+
 router.get('/login', async(req, res) => {
     try {
 
@@ -61,5 +63,7 @@ router.get('/profile', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+
 
 module.exports = router;
