@@ -24,6 +24,8 @@ router.get('/', async(req, res) => {
         res.status(500).json(err);
     }
 });
+
+
 router.get('/login', async(req, res) => {
     try {
 
@@ -33,6 +35,10 @@ router.get('/login', async(req, res) => {
         res.status(500).json(err);
     }
 });
+router.get("/thisisdog", (req, res) => {
+    res.render("dog")
+})
+
 
 
 module.exports = router;

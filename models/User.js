@@ -38,10 +38,10 @@ User.init(
                 len: [10],
             },
         },
-        profileImage : {
-            cloudinary: cloudinary,
+        // profileImage : {
+        //     cloudinary: cloudinary,
 
-        },
+        // },
 
         bio : {
             type: DataTypes.TEXT,

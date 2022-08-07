@@ -1,12 +1,16 @@
 const router = require('express').Router();
-const { techinterests, Friends, User } = require('../models');
+const { techinterests, Friends, User } = require('../../models');
 const cloudinary = require("cloudinary");
 
+router.post('/', (req, res) => {
+    console.log(req.body)
+    console.log("yo")
 
-router.post('/homepage.handlebars', (req, res) => {
-        console.log('testing yo yoyoyoyoyoyo')
-})
-app.post('', (req, res) => {
+    User.create(req.body)
+    .then(newUser => {
+        console.log(newUser)
+        res.json("added a new user")
+    })
 
 });
 
