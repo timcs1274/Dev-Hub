@@ -6,17 +6,23 @@ function loginUser (e) {
     e.preventDefault();
 
     const userLogin = {
-        email: emailInputEl,
-        password: passwordInputEl,
+        email: emailInputEl.value,
+        password: passwordInputEl.value,
     }
-    console.log('Logging in user');
-    fetch('/api/login', {
+    console.log('Logging in user',userLogin);
+    fetch('/api/user/login', {
         method: 'POST',
         body: JSON.stringify(userLogin),
         headers: {
             'Content-Type': 'application/json'
         }
-    }).catch(err => (console.log(err)))
+    })
+    .then(data => {
+        data.json()
+        console.log(data)
+        location.assign("/user")
+    })
+    .catch(err => (console.log(err)))
 
 }
 
