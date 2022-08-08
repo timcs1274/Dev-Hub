@@ -1,6 +1,6 @@
 const emailInputEl = document.getElementById("InputEmail1");
 const passwordInputEl = document.getElementById("PasswordInput1");
-const loginFormEl = document.getElementById('signup-btn');
+const loginFormEl = document.getElementById('login-btn');
 
 function loginUser (e) {
     e.preventDefault();

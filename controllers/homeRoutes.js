@@ -25,7 +25,6 @@ router.get('/', async(req, res) => {
     }
 });
 
-
 router.get('/login', async(req, res) => {
     try {
 
@@ -44,14 +43,19 @@ router.get('/signup', async(req, res) => {
     }
 });
 
-//setting home route
-router.get('/home', async(req, res) =>{
+//setting user home route
+router.get('/user', async(req, res) =>{
     try {
-        res.render('homepage');
+        res.render('userpage');
     } catch (err) {
         res.status(500).json(err);
     }
 });
+
+
+module.exports = router;
+
+
 
 // router.get('/profile', withAuth, async (req, res) => {
 //     try {
@@ -71,9 +75,3 @@ router.get('/home', async(req, res) =>{
 //       res.status(500).json(err);
 //     }
 //   });
-
-
-
-
-
-module.exports = router;
