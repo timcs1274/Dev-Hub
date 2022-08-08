@@ -1,6 +1,6 @@
 const emailInputEl = document.getElementById("InputEmail1");
 const passwordInputEl = document.getElementById("PasswordInput1");
-const loginFormEl = document.getElementById('login-form');
+const loginFormEl = document.getElementById('signup-btn');
 
 function loginUser (e) {
     e.preventDefault();
@@ -11,7 +11,7 @@ function loginUser (e) {
     }
     console.log('Logging in user');
     fetch('/api/login', {
-        method: 'GET',
+        method: 'POST',
         body: JSON.stringify(userLogin),
         headers: {
             'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ function loginUser (e) {
 
 }
 
-loginFormEl.addEventListener('click', uploadNewUser)
+loginFormEl.addEventListener('click', loginUser)
 
 
 
