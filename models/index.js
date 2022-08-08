@@ -13,36 +13,26 @@ const ProjectUser = require('./projectUser');
 //one user can have many proj but can only have one owner
 
 //User hasMany projects
-User.belongsToMany(Project, {
-    foreignKey: 'project_id', //is this correct?
-    through:{
-      model: ProjectUser,
-      unique: false,
-    }
-    
-    // unique: false
-    // as: 'products'
-  });
+User.hasMany(Project, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
 
-Project.belongsToMany(User, {
-    foreignKey: 'user_id', //is this correct?
-    through:{
-      model: ProjectUser,
-      unique: false,
-    }
-  });
+Project.belongsTo(User, {
+  foreignKey: 'user_id'
+});
   
  
  //User haveMany techInterests
-  User.hasMany(techInterest, {
-    foreignKey: 'user_id', //is this foreign key correct? confused about foreign keys?
-    onDelete: "CASCADE"
-  });
+  // User.hasMany(techInterest, {
+  //   foreignKey: 'user_id', //is this foreign key correct? confused about foreign keys?
+  //   onDelete: "CASCADE"
+  // });
 
-  techInterest.belongsTo(User,{
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-  });
+  // techInterest.belongsTo(User,{
+  //   foreignKey: 'user_id',
+  //   onDelete: 'CASCADE'
+  // });
   
   //Users HasMany (users) - through a join friends table
   // User.belongsToMany(User, {
