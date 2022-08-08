@@ -12,14 +12,14 @@ function uploadNewUser (e) {
         password: passwordInputEl.value,
         bio: "default bio"
     }
-
+console.log('Were here uploadNewUser')
     fetch('/api/newuser', {
         method: "POST",
         body: JSON.stringify(newUserObj),
         headers: {
             'Content-Type': 'application/json'
         }
-    })
+    }).catch(err => (console.log(err)))
 }
 
-signupFormEl.addEventListener("submit", uploadNewUser)
+signupFormEl.addEventListener("click", uploadNewUser)
