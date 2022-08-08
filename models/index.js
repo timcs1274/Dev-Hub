@@ -1,7 +1,7 @@
 //join table
 
 const User = require('./User');
-const project = require('./project');
+const Project = require('./project');
 const techInterest = require('./techinterests');
 const ProjectUser = require('./projectUser');
 
@@ -13,7 +13,7 @@ const ProjectUser = require('./projectUser');
 //one user can have many proj but can only have one owner
 
 //User hasMany projects
-User.belongsToMany(project, {
+User.belongsToMany(Project, {
     foreignKey: 'project_id', //is this correct?
     through:{
       model: ProjectUser,
@@ -69,7 +69,7 @@ Project.belongsToMany(User, {
 
 module.exports = {
     techInterest,
-    project, 
+    Project, 
     User
 }
 
