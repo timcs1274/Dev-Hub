@@ -18,9 +18,14 @@ function loginUser (e) {
         }
     })
     .then(data => {
-        data.json()
-        console.log(data)
-        location.assign("/user")
+        if (data.status === 400){
+            console.log("user not found")
+        }else{
+            location.assign("/user")
+        }
+        //  data.json()
+        // console.log(data)
+       
     })
     .catch(err => (console.log(err)))
 
