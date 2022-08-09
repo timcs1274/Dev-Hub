@@ -13,34 +13,8 @@
     <link rel="stylesheet" href="/public/css/mainStyle.css">
     <title>⌨️ Dev Hub</title>
 </head>
-
-        <!-- Renders logout links -->
-        {{#if logged_in}}
-
-   
-            <h1> <span role="img" aria-label="team">🖥️</span>
-        <a href="/">DEV HUB</a></h1>
-      {{/if}}
-    
-     <nav>
-         <!-- Renders logout links -->
-         {{#if logged_in}} 
-        <a href="/">Home</a> |
-        <a href="/dashboard">Dashboard</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-    </nav>
     </header>
     <main class="container container-fluid mt-5">
-
-        {{#if logged_in}}
-        <p>Created by {{name}}</p>
-        {{/if}}
-
-
-        <!-- Rendering layout -->
         {{{ body }}}
     </main>
 
