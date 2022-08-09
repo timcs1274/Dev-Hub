@@ -3,7 +3,7 @@
 
 <body  class="bg-success p-2 text-dark bg-opacity-25">
 
-<nav class="navbar navbar-dark bg-dark">
+{{!-- <nav class="navbar navbar-dark bg-dark">
   <!-- Navbar content -->
   <div class="container-fluid">
     <div class="navbar-header">
@@ -14,7 +14,25 @@
     </ul>
     <button class="btn btn-danger navbar-btn"><a href="/login" style="text-decoration: none;">Logout </a></button>
   </div>
-</nav>
+</nav> --}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">🖥️Dev Hub</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                        <li class="nav-item">
+                            {{#if logged_in}} 
+                            <a class="nav-link" href="/login">Logout</a>
+                            {{else}}
+                            <a class="nav-link" href="/login">Logout</a>
+                            {{/if}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
 <style>
   body {
@@ -90,48 +108,47 @@ html {
 
 
   <div class="about-section">
-  <h1>About Us Page</h1>
-  <p>Some text about who we are and what we do.</p>
-  <p>Resize the browser window to see that this page is responsive by the way.</p>
+  <h1>Projects</h1>
+  <p>Welcome</p>
+  <p>Collaborators</p>
+    <p>⬇️</p>
 </div>
 
-<h2 style="text-align:center">Our Team</h2>
+<h2 style="text-align:center">USERS</h2>
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+     
       <div class="container">
-        <h2>Jane Doe</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>jane@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <h2>David</h2>
+        <p class="title">Looking for someone that can use javascript</p>
+        <p></p>
+        <p></p>
+        <p><button class="button"></button></p>
       </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
       <div class="container">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <h2>Tim</h2>
+        <p class="title">Looking for someone to do HTML</p>
+        <p></p>
+        <p></p>
+        <p><button class="button"></button></p>
       </div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
       <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <h2>Yahir</h2>
+        <p class="title">Looking for a stylist</p>
+        <p></p>
+        <p></p>
+        <p><button class="button"></button></p>
       </div>
     </div>
   </div>
