@@ -42,10 +42,11 @@ User.init({
 
     // },
 
-    bio: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-    }
+    // bio: {
+    //     type: DataTypes.TEXT,
+    //     allowNull: true,
+    //     defaultValue:""
+    // }
 }, {
     //add hooks for beforecreate and beforeUpdate with .hash and the allowed length of passowrd 
     hooks: {

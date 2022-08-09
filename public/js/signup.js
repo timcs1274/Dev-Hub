@@ -10,7 +10,7 @@ function uploadNewUser (e) {
         name: nameInputEl.value,
         email: emailInputEl.value,
         password: passwordInputEl.value,
-        bio: "default bio"
+        // bio: "default bio"
     }
 console.log('Were here uploadNewUser')
     fetch('/api/newuser', {
