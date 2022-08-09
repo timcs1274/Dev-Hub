@@ -34,7 +34,7 @@ User.init({
         allowNull: false,
         isAlphaNumeric: true,
         validate: {
-            len: [10],
+            len: [1],
         },
     },
     // profileImage : {
