@@ -19,7 +19,15 @@ console.log('Were here uploadNewUser')
         headers: {
             'Content-Type': 'application/json'
         }
-    }).catch(err => (console.log(err)))
+    })
+    .then(data => {
+        if (data.status === 400) {
+            console.log("Error, check signup.js ln. 25")
+        }else{
+            location.assign("/login")
+        }
+    })
+    .catch(err => (console.log(err)))
 }
 
 signupFormEl.addEventListener("click", uploadNewUser)
