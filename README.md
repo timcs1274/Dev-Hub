@@ -1,62 +1,52 @@
 # DEV-HUB
 
-## License
-  ![badge](https://img.shields.io/badge/licence-MIT-brightgreen)
-  [https://choosealicense.com/licenses/mit/](https://choosealicense.com/licenses/mit/)
+## Description
 
-      
+If you're a developer then you must have, at some point, wanted to find a partner to work on a project with. Our social network application Dev-Hub removes the difficulty of having to look for coding collaborators. Since this application is still in the development stages, in the meantime a user is only able to create an account. Here is a list of features we wish to add in the future to deliver on our promise of collaboration:
+
+* Overhauled landing page
+* Add user profiles
+* Add support for uploadable profile pictures (Cloudinary)
+* Add features for narrowing down project searches based on interests.
+* The ability to favorite projects
+* Searching for other users
+* Ability to add friends
+* Ability to delete accounts
+
+
 
 ## Table of Contents
+
+* [Technology_Used](#Technology_Used)
+* [Deployed-link](#Deployed-link)
 * [License](#License)
-* [Tools](#Tools)
-* [Description](#Description)
-* [App-link](#App-link)
-* [Repository](#Repository)
-* [github-links](#github-links)
-* [App-link](#App-link)
 * [Collaboration](Collaboration)
 
-## Tools
+
+
+## Technology_Used
+
 JS, HEROKU, Node, Terminal, Express, Nodemon, Handlebars, CSS, Bootstrap.
 
-## Description
-If you're a developer then you must at some point want to collaborate with someone on a project, but it can be difficult to find the right people for the job.
-Our social network application DEV-HU removes the difficulty of having to look for coding collaborators. 
-This application is still in the development stages.
-Here are the main features it will have:
-* A User will able to sign-up and create a profile.
-* Once they signup, the user will be able to login.
-* Then the user will be brought to the user's page.
-* The user page will display profile cards of people looking for collborators.
-* The navigation bar has a Home and logout button.
-* When the user is done, they can logout and log back in. 
+*Here's a gif of the deployed app in use*
+![gif](/images/demo.gif)
 
 
 
+## Deployed-link
 
-## App-link
+*Be sure to check out the deployed application!*
 https://devhubapplication.herokuapp.com/
 
-## Repository
-
-https://github.com/timcs1274/Dev-Hub
 
 
-# github-links
+## License
 
-David: https://github.com/DNA601
-
-Tim: https://github.com/timcs1274
-
-Yahir: https://github.com/Yahir-F
+![badge](https://img.shields.io/badge/licence-MIT-brightgreen)
 
 
- ## gif
 
- ![gif](/images/demo.gif)
+## Collaborators
 
-##
-
-## Collaboration
-### Timothy Sasse, Yahir Federico, David Navarrete Ayala
+### [Timothy Sasse](https://github.com/timcs1274), [Yahir Federico](https://github.com/Yahir-F), [David Navarrete Ayala](https://github.com/DNA601)
 
