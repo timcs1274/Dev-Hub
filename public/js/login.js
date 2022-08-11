@@ -23,8 +23,7 @@ function loginUser (e) {
         }else{
             location.assign("/user")
         }
-        //  data.json()
-        // console.log(data)
+        
        
     })
     .catch(err => (console.log(err)))

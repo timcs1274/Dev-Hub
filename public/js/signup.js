@@ -10,7 +10,7 @@ function uploadNewUser(e) {
     const name = nameInputEl.value
     const email = emailInputEl.value
     const password = passwordInputEl.value
-    // bio: "default bio"
+
     const newUserData = {
         name: name,
         email: email,

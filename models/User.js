@@ -3,8 +3,6 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class User extends Model {
-    //probably have to check password here (login)
-    //then return a bcrypted password and compare it with signup info
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
     }
@@ -37,18 +35,9 @@ User.init({
             len: [0],
         },
     },
-    // profileImage : {
-    //     cloudinary: cloudinary,
-
-    // },
-
-    // bio: {
-    //     type: DataTypes.TEXT,
-    //     allowNull: true,
-    //     defaultValue:""
-    // }
+   
 }, {
-    //add hooks for beforecreate and beforeUpdate with .hash and the allowed length of passowrd 
+  
     hooks: {
         beforeCreate: async(newUserData) => {
             newUserData.password = await bcrypt.hash(newUserData.password, 10);
@@ -67,11 +56,3 @@ User.init({
 });
 
 module.exports = User;
-
-
-//useruser model- jointable (friend)
-
-//projectuser model (collab)
-
-//userProject
-// Projectbelongstouseras Owner
