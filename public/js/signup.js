@@ -3,31 +3,37 @@ const emailInputEl = document.getElementById("email-signup");
 const passwordInputEl = document.getElementById("password-signup");
 const signupFormEl = document.getElementById("sign-up");
 
-function uploadNewUser (e) {
+function uploadNewUser(e) {
     e.preventDefault();
 
-    const newUserObj = {
-        name: nameInputEl.value,
-        email: emailInputEl.value,
-        password: passwordInputEl.value,
-        // bio: "default bio"
+
+    const name = nameInputEl.value
+    const email = emailInputEl.value
+    const password = passwordInputEl.value
+
+    const newUserData = {
+        name: name,
+        email: email,
+        password: password,
+
     }
-console.log('Were here uploadNewUser')
-    fetch('/api/newuser', {
-        method: "POST",
-        body: JSON.stringify(newUserObj),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(data => {
-        if (data.status === 400) {
-            console.log("Error, check signup.js ln. 25")
-        }else{
-            location.assign("/login")
-        }
-    })
-    .catch(err => (console.log(err)))
+
+    if (name && email && password)
+        fetch('/api/newuser', {
+            method: "POST",
+            body: JSON.stringify(newUserData),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(data => {
+                if (data.status === 400) {
+                    console.log("Error, check signup.js ln. 25")
+                } else {
+                    location.assign("/login")
+                }
+            })
+            .catch(err => (console.log(err)))
 }
 
 signupFormEl.addEventListener("click", uploadNewUser)

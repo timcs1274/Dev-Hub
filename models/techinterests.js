@@ -3,8 +3,7 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class techInterest extends Model {
-    //probably have to check password here (login)
-    //then return a bcrypted password and compare it with signup info
+
 }
 
 techInterest.init(
